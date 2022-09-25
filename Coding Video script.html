@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Praktik Video</title>
+ </head>
+ <Body>
+	<h2>HTML 5 - Praktik Video Multimedia </h2>
+		<button onclick="playVid()">play</button>
+		<button onclick="pauseVid()">pause</button>
+		<button onclick="durationVid()">duration</button>
+		<button onclick="enableControls()">enable</button>
+		<button onclick="disableControls()">disable</button>
+		<br>
+		 
+    <Video width="420" height="240" id ="myvideo" controls>
+		<source src ="mov_bbb.mp4" type ="video/mp4">
+	</video>
+		</body>
+	<script>
+	var vid=document.getElementById("myvideo");
+	
+		function playVid() {
+			vid.play();
+		}
+		
+		function pauseVid() {
+			vid.pause();
+		}
+		function durationVid() {
+			alert(vid.duration);
+		}
+		function enableControls (){
+		vid.controls = true;
+		vid.load();
+		}
+		function disableControls() {
+		vid.controls = false;
+		vid.load();
+		}
+	</script> 
+	</br>
+</html>
